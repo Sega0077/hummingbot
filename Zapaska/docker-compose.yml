@@ -25,21 +25,21 @@ services:
     tty: true
     stdin_open: true
     network_mode: host
-    environment:
-      - CONFIG_PASSWORD=test01
+    #  environment:
+    #    - CONFIG_PASSWORD=a
     #    - CONFIG_FILE_NAME=simple_pmm_example.py
     #    - SCRIPT_CONFIG=conf_simple_pmm_example.yaml
 
-  gateway:
-    container_name: gateway
-    image: hummingbot/gateway:latest
-    ports:
-      - "15888:15888"
-      - "8080:8080"
-    volumes:
-      - "./gateway_files/conf:/home/gateway/conf"
-      - "./gateway_files/logs:/home/gateway/logs"
-      - "./gateway_files/db:/home/gateway/db"
-      - "./certs:/home/gateway/certs"
-    environment:
-      - GATEWAY_PASSPHRASE=test02
+  # gateway:
+  #  container_name: gateway
+  #  image: hummingbot/gateway:latest
+  #  ports:
+  #    - "15888:15888"
+  #    - "8080:8080"
+  #  volumes:
+  #    - "./gateway_files/conf:/home/gateway/conf"
+  #    - "./gateway_files/logs:/home/gateway/logs"
+  #    - "./gateway_files/db:/home/gateway/db"
+  #    - "./certs:/home/gateway/certs"
+  #  environment:
+  #    - GATEWAY_PASSPHRASE=a
